@@ -18,10 +18,11 @@ export default () => {
             />
             <Button
                 onClick={convertStringToArray}
+                text='Convert string into array of splitted words'
             />
             <div>
                 {splittedString.map((word) => <p>{word}</p>)}
-                </div>
+            </div>
         </div>
     )
 }

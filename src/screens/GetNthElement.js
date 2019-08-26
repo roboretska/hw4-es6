@@ -1,13 +1,13 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import {Input, Button} from '../components'
 import {getNthElement} from '../utils'
 
 export default () => {
     const [stringValue, changeStringValue] = useState('');
-    const [indexValue, setIndexValue] = useState(0);
+    const [indexValue, setIndexValue] = useState(null);
     const [result, getResult] = useState(null);
     const getElement = () => {
-        getNthElement(indexValue, stringValue.split(','), getResult);
+        getNthElement(indexValue, getResult, ...stringValue.split(','));
     };
     return(
         <div>
@@ -23,6 +23,7 @@ export default () => {
             />
             <Button
                 onClick={getElement}
+                text='Get nth element from arguments'
             />
             {result && <div>
                 {result}

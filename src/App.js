@@ -6,6 +6,7 @@ function App() {
     <div className="App">
       <Screens.StringIntoArraysOfWords/>
       <Screens.GetNthElement/>
+      <Screens.NumberToDigits/>
     </div>
   );
 }
