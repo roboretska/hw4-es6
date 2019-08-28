@@ -13,3 +13,19 @@ export const numberToDigit = (num, setResult) => {
         .map(digit => parseInt(digit))
         .filter((digit) => !isNaN(digit)));
 };
+
+export const csvToArray = (csv, setResult) => {
+    const firstLineEnd = csv.indexOf('\n');
+    const titles = csv.slice(0, firstLineEnd).split(',');
+    const stringLines = csv
+        .slice(firstLineEnd + 1)
+        .split('\n').reduce((prev, curr) => {
+            const parsedObj = {};
+            curr.split(',').forEach((val, i) => {
+                parsedObj[titles[i]] = val;
+            });
+            return [...prev, parsedObj];
+        }, []);
+    console.log('titles', titles)
+    console.log('strings', stringLines)
+};
