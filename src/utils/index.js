@@ -29,3 +29,14 @@ export const csvToArray = (csv, setResult) => {
     console.log('titles', titles)
     console.log('strings', stringLines)
 };
+
+export const createPromise = (delay) => {
+    return new Promise(((resolve) => {
+        console.log(`New promise with delay ${delay} is processing`);
+        setTimeout(resolve, delay);
+    }))
+};
+
+export const promisesInSeries = (arr) => {
+    return arr.reduce((current, next, ) => current.then(next), Promise.resolve());
+};
