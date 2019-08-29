@@ -40,3 +40,11 @@ export const createPromise = (delay) => {
 export const promisesInSeries = (arr) => {
     return arr.reduce((current, next, ) => current.then(next), Promise.resolve());
 };
+
+export const callCallbackNTimes = (n, callback) => {
+    const func = (i = 0) => {
+        callback(i);
+        i < n && func(++i);
+    };
+    return func()
+}

@@ -14,6 +14,7 @@ function App() {
                 <Link to='/numberToDigits'>Convert number to digits</Link>
                 <Link to='/csv'>Convert CSV to array of objects</Link>
                 <Link to='/promises'>Array of promises in series</Link>
+                <Link to='/callbackIteration'>Callback iteration</Link>
             </div>
             <Screens.NumberToDigits/>
             <Route exact path='/' render={() => <Redirect to='/stringToArraysOfWords'/>}/>
@@ -22,6 +23,7 @@ function App() {
             <Route path='/numberToDigits' component={Screens.NumberToDigits}/>
             <Route path='/csv' component={Screens.CsvToArray}/>
             <Route path='/promises' component={Screens.PromisesInSeries}/>
+            <Route path='/callbackIteration' component={Screens.CallbackIterations}/>
         </BrowserRouter>
     </div>
   );
