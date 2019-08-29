@@ -29,3 +29,19 @@ export const csvToArray = (csv, setResult) => {
     console.log('titles', titles)
     console.log('strings', stringLines)
 };
+
+export const addListener = (elem, event, handleFunc, delegationTags = null) => {
+    debugger;
+    const handler = delegationTags && delegationTags.length
+        ? (e) => {
+        const isMatch = delegationTags.find((elemClass) =>
+            e.target.className.match(elemClass)
+        );
+            isMatch ? handleFunc.call(e.target, e) : console.info('Not that elem')}
+        : () => console.info('without delegation');
+    elem.addEventListener(event, handler);
+};
+
+export const getUnion = (firstArr, secondArr, setResult) => {
+    setResult(Array.from(new Set([...firstArr, ...secondArr])).sort());
+};
