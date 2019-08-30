@@ -45,3 +45,22 @@ export const addListener = (elem, event, handleFunc, delegationTags = null) => {
 export const getUnion = (firstArr, secondArr, setResult) => {
     setResult(Array.from(new Set([...firstArr, ...secondArr])).sort());
 };
+
+export const createPromise = (delay) => {
+    return new Promise(((resolve) => {
+        console.log(`New promise with delay ${delay} is processing`);
+        setTimeout(resolve, delay);
+    }))
+};
+
+export const promisesInSeries = (arr) => {
+    return arr.reduce((current, next, ) => current.then(next), Promise.resolve());
+};
+
+export const callCallbackNTimes = (n, callback) => {
+    const func = (i = 0) => {
+        callback(i);
+        i < n && func(++i);
+    };
+    return func()
+};

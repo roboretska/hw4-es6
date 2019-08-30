@@ -4,6 +4,8 @@ import NumberToDigits from './NumberToDigits'
 import CsvToArray from './CsvToArray'
 import ListenerWithDelegation from './ListenerWithDelegation'
 import GetArraysUnion from './GetArraysUnion'
+import PromisesInSeries from './PromisesInSeries'
+import CallbackIterations from './CallbackIterations'
 
 export default {
     StringIntoArraysOfWords,
@@ -11,5 +13,7 @@ export default {
     NumberToDigits,
     CsvToArray,
     ListenerWithDelegation,
-    GetArraysUnion
+    GetArraysUnion,
+    PromisesInSeries,
+    CallbackIterations
 };
