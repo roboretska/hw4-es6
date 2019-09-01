@@ -64,3 +64,18 @@ export const callCallbackNTimes = (n, callback) => {
     };
     return func()
 };
+
+export const splitValuesToTwoArrays = (arr, filterFunc) => {
+    return arr.reduce((acc, currValue) => {
+        const isRight = filterFunc(currValue) ? 0 : 1;
+        acc[isRight].push(currValue);
+        return acc;
+    }, [[], []])
+};
+
+export const  calcultEloResults = (players, k = 16) => {
+   const expectedScore = (selfCurrScore, opponentCurrScore) =>
+       1 / (1 + 10 ** ((opponentCurrScore - selfCurrScore) / 400));
+   const newPlayersRating = (selfCurrScore) =>
+       selfCurrScore+ k * ()
+};

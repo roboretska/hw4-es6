@@ -6,6 +6,7 @@ import ListenerWithDelegation from './ListenerWithDelegation'
 import GetArraysUnion from './GetArraysUnion'
 import PromisesInSeries from './PromisesInSeries'
 import CallbackIterations from './CallbackIterations'
+import SplitIntoTwoArrays from './SplitIntoTwoArrays'
 
 export default {
     StringIntoArraysOfWords,
@@ -15,5 +16,6 @@ export default {
     ListenerWithDelegation,
     GetArraysUnion,
     PromisesInSeries,
-    CallbackIterations
+    CallbackIterations,
+    SplitIntoTwoArrays
 };

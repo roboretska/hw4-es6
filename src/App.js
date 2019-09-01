@@ -17,6 +17,7 @@ function App() {
                 <Link to='/getArraysUnion'>Get arrays union</Link>
                 <Link to='/promises'>Array of promises in series</Link>
                 <Link to='/callbackIteration'>Callback iteration</Link>
+                <Link to='/splitIntoTwoArrays'>Split values into two groups with condition</Link>
             </div>
             <Route exact path='/' render={() => <Redirect to='/stringToArraysOfWords'/>}/>
             <Route path='/stringToArraysOfWords' component={Screens.StringIntoArraysOfWords}/>
@@ -27,6 +28,7 @@ function App() {
             <Route path='/getArraysUnion' component={Screens.GetArraysUnion}/>
             <Route path='/promises' component={Screens.PromisesInSeries}/>
             <Route path='/callbackIteration' component={Screens.CallbackIterations}/>
+            <Route path='/splitIntoTwoArrays' component={Screens.SplitIntoTwoArrays}/>
         </BrowserRouter>
     </div>
   );
