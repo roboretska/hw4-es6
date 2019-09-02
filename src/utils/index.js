@@ -74,8 +74,14 @@ export const splitValuesToTwoArrays = (arr, filterFunc) => {
 };
 
 export const  calcultEloResults = (players, k = 16) => {
-   const expectedScore = (selfCurrScore, opponentCurrScore) =>
-       1 / (1 + 10 ** ((opponentCurrScore - selfCurrScore) / 400));
-   const newPlayersRating = (selfCurrScore) =>
-       selfCurrScore+ k * ()
+    debugger;
+   const expectedRating = (selfCurrRating, opponentCurrRating) =>
+       1 / (1 + 10 ** ((opponentCurrRating - selfCurrRating) / 400));
+   const newPlayersRating = (selfCurrRating, expectedSelfRation, currScore) =>
+       //current score: 1 if win, 0 if lose, 0.5
+       Math.round(selfCurrRating + k * (currScore - expectedSelfRation));
+   return players.map((player, i, arr) => {
+        const expectedPlayerRating = expectedRating(player.rating, arr[player.opponent].rating);
+        return newPlayersRating(player.rating, expectedPlayerRating, player.isWon);
+    })
 };

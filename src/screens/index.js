@@ -7,6 +7,7 @@ import GetArraysUnion from './GetArraysUnion'
 import PromisesInSeries from './PromisesInSeries'
 import CallbackIterations from './CallbackIterations'
 import SplitIntoTwoArrays from './SplitIntoTwoArrays'
+import EloRating from './EloRating'
 
 export default {
     StringIntoArraysOfWords,
@@ -17,5 +18,6 @@ export default {
     GetArraysUnion,
     PromisesInSeries,
     CallbackIterations,
-    SplitIntoTwoArrays
+    SplitIntoTwoArrays,
+    EloRating
 };

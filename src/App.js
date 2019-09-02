@@ -18,6 +18,7 @@ function App() {
                 <Link to='/promises'>Array of promises in series</Link>
                 <Link to='/callbackIteration'>Callback iteration</Link>
                 <Link to='/splitIntoTwoArrays'>Split values into two groups with condition</Link>
+                <Link to='/elo'>Calculate Elo rating</Link>
             </div>
             <Route exact path='/' render={() => <Redirect to='/stringToArraysOfWords'/>}/>
             <Route path='/stringToArraysOfWords' component={Screens.StringIntoArraysOfWords}/>
@@ -29,6 +30,7 @@ function App() {
             <Route path='/promises' component={Screens.PromisesInSeries}/>
             <Route path='/callbackIteration' component={Screens.CallbackIterations}/>
             <Route path='/splitIntoTwoArrays' component={Screens.SplitIntoTwoArrays}/>
+            <Route path='/elo' component={Screens.EloRating}/>
         </BrowserRouter>
     </div>
   );
